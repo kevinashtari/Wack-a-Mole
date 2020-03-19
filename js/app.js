@@ -47,12 +47,22 @@ const game = {
 
   //startGame method is a function that gets run once, and calls the rest of the functions in order
   startGame: function(){
-    console.log("the game has started")
+    console.log("the game has started");
     //in here make a mole show up in a random place
+},
+  peek: function() {
+    const time = randomTime(200, 1000);
+    const divClassNum = randomNumForMoles(hole);
+      makeMoles.divClassNum.add('up');
+    setTimeout(() => {
+      makeMoles.divClassNum.remove('up');
+    }, time);
+
+}
     //make a function outside of starGame(but still inside the game object) that produces a mole
     //call that mole producing functino here
     //see if it works, and if it doesn't make it work
-    this.makeMoles()
+    //this.makeMoles()
    // this.timeUp = true;
     //score = 0;
   // This will become the peek function peek();
@@ -62,7 +72,9 @@ const game = {
     return Math.round(Math.random() * (max - min) + min);
   }
 
-}
+
+
+
 
 
 //game.startGame()

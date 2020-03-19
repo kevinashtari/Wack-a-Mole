@@ -33,3 +33,6 @@ body {
 .hole:active {
 	background-color: black;
 }
+makeMoles {
+background-color: red;
+}
