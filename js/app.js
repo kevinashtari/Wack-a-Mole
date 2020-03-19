@@ -39,7 +39,7 @@ const game = {
   },
 
   makeMoles: function(){
-    let divClassNum = this.randomNumForMoles(1, 6)
+    let divClassNum = this.rNum(1, 6)
     console.log("this is divClassNum inside makeMoles\n", divClassNum)
     console.log("a mole was made")
   },
@@ -48,17 +48,13 @@ const game = {
   //startGame method is a function that gets run once, and calls the rest of the functions in order
   startGame: function(){
     console.log("the game has started");
-    //in here make a mole show up in a random place
-},
-  peek: function() {
-    const time = randomTime(200, 1000);
-    const divClassNum = randomNumForMoles(hole);
-      makeMoles.divClassNum.add('up');
-    setTimeout(() => {
-      makeMoles.divClassNum.remove('up');
-    }, time);
 
-}
+    //in here make a mole show up in a random place
+  function makeMoles(){
+    return('divClassNum')
+  };
+  
+// }
     //make a function outside of starGame(but still inside the game object) that produces a mole
     //call that mole producing functino here
     //see if it works, and if it doesn't make it work
@@ -67,37 +63,16 @@ const game = {
     //score = 0;
   // This will become the peek function peek();
     //setTimeout(() => (timeUp = true), 10000);
-  },
-  randomNumForMoles: function (min, max){
-    return Math.round(Math.random() * (max - min) + min);
+
+  rNum:function(min, max){
+    return Math.round(Math.random * (max - min + min)
   }
 
-
-
-
-
-
 //game.startGame()
-game.randomNumForMoles(0, 7)
-console.log("This is the randomNumForMoles func in game object that we just called\n", game.randomNumForMoles(0, 7))
+game.rNum(0, 7)
+console.log("This is the rNum func in game object that we just called\n", game.randomNumForMoles(0, 7))
 
 
-// function randomHole(){
-
-// }
-// function randomTime(){
-
-// }
-// function peek(){
-
-// }
-// function whack(){
-
-// }
-
-//add event listener
-
-/// listeners
 addEventListener('click', (event) => {
   console.log(event.target); // note this is vanilla
   //console.log(holes)
