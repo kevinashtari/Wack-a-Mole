@@ -1,4 +1,4 @@
-.hole {
+.holes {
 	/*flex: 1 0 33, 33%; */
 	overflow: hidden;
 	position: relative;
@@ -30,9 +30,9 @@ body {
   margin: 0;
   font-family: 'Amatic SC', cursive;
 }
-.hole:active {
+.holes:active {
 	background-color: black;
 }
-makeMoles {
-color: red;
+.moles {
+	background-color: red;
 }

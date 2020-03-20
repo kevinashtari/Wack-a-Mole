@@ -1,8 +1,8 @@
-const holes = document.querySelectorAll('.hole');
+const holes = document.querySelectorAll('.holes');
 
 const scoreBoard = document.querySelectorAll('.score')
 
-const moles = document.querySelectorAll('.mole')
+const moles = document.querySelectorAll('.moles')
 // let timeUp = false;
 // let score = 0;
 // let lastHole;
@@ -20,7 +20,7 @@ const game = {
   timer: 10,
   score: 0,
   clickedDiv: null,
-  moleDiv: null,
+  moleDiv: 0,
 
   increaseTime: function(){
     //setTimeout(() => (timeUp = true), 10000);
@@ -39,7 +39,17 @@ const game = {
   },
 
   makeMoles: function(){
-    let divClassNum = this.rNum(1, 6)
+    let divClassNum = this.rNum(5)
+    let moleHole = holes[divClassNum]
+    ////////////////////////////////////////////////////////////////////////////////
+    //look up ways to change class of a div on MDN
+    ////////////////////////////////////////////////////////////////////////////////
+     //here we want to change the class of the selected hole to the mole
+    
+    moleHole.classList.add('moles');
+
+
+    console.log("This is the molehole that was accessed by makeMoles\n", moleHole)
     console.log("this is divClassNum inside makeMoles\n", divClassNum)
     console.log("a mole was made")
   },
@@ -50,11 +60,9 @@ const game = {
     console.log("the game has started");
 
     //in here make a mole show up in a random place
-  function makeMoles(){
-    return('divClassNum')
-  };
-  
-// }
+    this.makeMoles()
+
+  },
     //make a function outside of starGame(but still inside the game object) that produces a mole
     //call that mole producing functino here
     //see if it works, and if it doesn't make it work
@@ -64,24 +72,79 @@ const game = {
   // This will become the peek function peek();
     //setTimeout(() => (timeUp = true), 10000);
 
-  rNum:function(min, max){
-    return Math.round(Math.random * (max - min + min)
-  }
+  rNum: function(max){
+   //return Math.round(Math.random * (max - min) + min)
+   return Math.floor(Math.random() * Math.floor(max))
+ }
+
+}
 
 //game.startGame()
-game.rNum(0, 7)
-console.log("This is the rNum func in game object that we just called\n", game.randomNumForMoles(0, 7))
+
+console.log("This is the rNum func in game object that we just called\n", game.rNum(6))
 
 
 addEventListener('click', (event) => {
   console.log(event.target); // note this is vanilla
+
   //console.log(holes)
   game.clickedDiv = event.target
   console.log("this is the clicked div", game.clickedDiv)
-  
+  // if(event.target == 'moles'){
+  // return('hit')
 
 
-})
+// if (event.target !=  'moles'){
+//   console.log('Mole Hit!') 
+// } else {
+//   console.log( 'Try again!')
+// }
+
+  ////////////////////////////////////////////////////////////////////////////////
+  //in here, log whether or not the clicked element was a mole or not
+  ////////////////////////////////////////////////////////////////////////////////
+ if(event.target.matches('.holes' + '.moles')){
+  console.log('Mole Hit')
+ }else {
+  console.log('You Miss')
+ }
+
+
+
+  //if a mole was clicked -- see if div has class of "moles" -- see if element.target is class of moles
+    // log yes
+  // else 
+    // log no
+
+});
+
+//element.addEventListener('click', holes, 
+
+// button.addEventListener('click', event => {
+//   button.innerHTML = `Click count: ${event.detail}`;
+
+//});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
