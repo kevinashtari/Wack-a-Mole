@@ -40,6 +40,9 @@ const game = {
 
 
   makeMoles: function(){
+    for(let i=0; i< holes.length; i++){
+      holes[i].classList.remove('moles')
+    }
     let divClassNum = this.rNum(6)
     let moleHole = holes[divClassNum]
     ////////////////////////////////////////////////////////////////////////////////
@@ -94,15 +97,6 @@ addEventListener('click', (event) => {
   //console.log(holes)
   game.clickedDiv = event.target
   console.log("this is the clicked div", game.clickedDiv)
-  // if(event.target == 'moles'){
-  // return('hit')
-
-
-// if (event.target !=  'moles'){
-//   console.log('Mole Hit!') 
-// } else {
-//   console.log( 'Try again!')
-// }
 
   ////////////////////////////////////////////////////////////////////////////////
   //in here, log whether or not the clicked element was a mole or not
@@ -110,12 +104,13 @@ addEventListener('click', (event) => {
  if(event.target.matches('.holes' + '.moles')){
   console.log('Mole Hit')
   //select the image that was clicked 
-
+//if hit remove all moles event.target remove the class of moles
   //remove that image
 
   //increment the game's score
 
   //select the score element by id 
+
 
   //change its inner text to match the new games score 
 

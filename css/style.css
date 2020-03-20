@@ -9,7 +9,7 @@
 
 .container {
  	display: grid;
-	grid-template-columns: 200px 200px 200px;
+	grid-template-columns: 150px 150px 150px;
 }
 
 button {
@@ -35,6 +35,5 @@ body {
 }
 .moles {
 	background-color: brown;
-	background-image: url(https://i.imgur.com/CV3fj1f.jpg?1); 
+	background-image: url(https://i.imgur.com/EmDlQ4Nb.png?3); 
 	
-}
