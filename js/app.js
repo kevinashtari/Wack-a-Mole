@@ -38,8 +38,9 @@ const game = {
     }, 1000)
   },
 
+
   makeMoles: function(){
-    let divClassNum = this.rNum(5)
+    let divClassNum = this.rNum(6)
     let moleHole = holes[divClassNum]
     ////////////////////////////////////////////////////////////////////////////////
     //look up ways to change class of a div on MDN
@@ -60,8 +61,11 @@ const game = {
     console.log("the game has started");
 
     //in here make a mole show up in a random place
-    this.makeMoles()
-
+    //set up an interval for timing have it call makeMoles()
+    setInterval(function(){
+      game.makeMoles();
+    }, 1000);
+   
   },
     //make a function outside of starGame(but still inside the game object) that produces a mole
     //call that mole producing functino here
@@ -105,6 +109,16 @@ addEventListener('click', (event) => {
   ////////////////////////////////////////////////////////////////////////////////
  if(event.target.matches('.holes' + '.moles')){
   console.log('Mole Hit')
+  //select the image that was clicked 
+
+  //remove that image
+
+  //increment the game's score
+
+  //select the score element by id 
+
+  //change its inner text to match the new games score 
+
  }else {
   console.log('You Miss')
  }
