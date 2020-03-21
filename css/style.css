@@ -1,5 +1,4 @@
 .holes {
-	/*flex: 1 0 33, 33%; */
 	overflow: hidden;
 	position: relative;
 	background-color: green;
@@ -8,42 +7,14 @@
 }
 
 .container {
-	/* display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-gap: 10px;
-  grid-auto-rows: 800px*/
-/* display: grid;
- grid-template-columns: 200px 200px 200px;
- grid-gap: 20px;
- align-items: auto;
- grid-auto-rows: 100px;
- align-self:  center;*/
-  display: grid;
-  margin: 0 auto;
-  grid-template-columns: 200px 200px 200px;
-  grid-gap: 30px;
-  justify-content: center;
+
+  	display: grid;
+  	margin: 0 auto;
+  	grid-template-columns: 200px 200px 200px;
+  	grid-gap: 30px;
+  	justify-content: center;
 
 }
-
-
-
-
- /* font-size: 10px;
-  width:600px;
-  height:400px;
-  display:grid;
-  margin:0 auto;*/
-
-
-
-/*
-	display: grid;
-	grid-template-columns: 400px 400px 400px;
-	
-	grid-gap: 20px*/
-
-
  
     
 
@@ -73,9 +44,9 @@ h1 {
 
 }
 body {
-  background-size:cover;
-  background-repeat:no-repeat;
-  background-image: url(https://i.imgur.com/gB7VLwI.jpg)
+  	background-size:cover;
+  	background-repeat:no-repeat;
+  	background-image: url(https://i.imgur.com/gB7VLwI.jpg)
   
 	
 }

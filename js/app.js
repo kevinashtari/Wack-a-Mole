@@ -3,18 +3,7 @@ const holes = document.querySelectorAll('.holes');
 const scoreBoard = document.querySelectorAll('.score')
 
 const moles = document.querySelectorAll('.moles')
-// let timeUp = false;
-// let score = 0;
-// let lastHole;
 
-
-// const h = 
-// document.getElementsByClassName('hole')
-// let i;
-// for (i = 0; i < h.length; i++) {
-//   h[i].style.backGroundColor = 'Red';
-// console.log(h)
-// }
 const game = {
   timeUp: false,
   timer: 10,
@@ -26,29 +15,25 @@ const game = {
     //setTimeout(() => (timeUp = true), 10000);
     const timeInterval = setInterval(() => {
       if(this.timer === 0){
-        clearInterval(timeInterval)
-        console.log("you're outta time")
+    clearInterval(timeInterval)
+    console.log("you're outta time")
        // scoreBoard.innerText = this.timer
-      } else {
+    } else {
         this.timer--
        // scoreBoard.innerText = this.timer
-        console.log("The time is ", this.timer)
-        console.log("this is the scoreboard", scoreBoard)
+    console.log("The time is ", this.timer)
+    console.log("this is the scoreboard", scoreBoard)
       }
     }, 1000)
   },
 
 
   makeMoles: function(){
-    for(let i=0; i< holes.length; i++){
+      for(let i=0; i< holes.length; i++){
       holes[i].classList.remove('moles')
     }
     let divClassNum = this.rNum(6)
     let moleHole = holes[divClassNum]
-    ////////////////////////////////////////////////////////////////////////////////
-    //look up ways to change class of a div on MDN
-    ////////////////////////////////////////////////////////////////////////////////
-     //here we want to change the class of the selected hole to the mole
     
     moleHole.classList.add('moles');
 
@@ -73,11 +58,6 @@ const game = {
     //make a function outside of starGame(but still inside the game object) that produces a mole
     //call that mole producing functino here
     //see if it works, and if it doesn't make it work
-    //this.makeMoles()
-   // this.timeUp = true;
-    //score = 0;
-  // This will become the peek function peek();
-    //setTimeout(() => (timeUp = true), 10000);
 
   rNum: function(max){
    //return Math.round(Math.random * (max - min) + min)
@@ -98,39 +78,19 @@ addEventListener('click', (event) => {
   game.clickedDiv = event.target
   console.log("this is the clicked div", game.clickedDiv)
 
-  ////////////////////////////////////////////////////////////////////////////////
-  //in here, log whether or not the clicked element was a mole or not
-  ////////////////////////////////////////////////////////////////////////////////
  if(event.target.matches('.holes' + '.moles')){
   console.log('Mole Hit')
   game.score = game.score + 1
   event.target.classList.remove('moles');
   document.getElementById('game-score').innerText = game.score
   if(game.score > 19){
-    alert('You Win!!')
+  alert('You Win!!')
   }
-  //select the image that was clicked 
-//if hit remove all moles event.target remove the class of moles
-  //remove that image
 
-  //increment the game's score
-
-  //select the score element by id 
-
-
-  //change its inner text to match the new games score 
 
 }else {
   console.log('You Miss')
  }
-
-// function getScore(click, moles){
-//   moles.score();
-//   score += 10;
-//   scoreText.setText('Points:' + score);
-// }
-
-
   //if a mole was clicked -- see if div has class of "moles" -- see if element.target is class of moles
     // log yes
   // else 
@@ -138,12 +98,7 @@ addEventListener('click', (event) => {
 
 });
 
-//element.addEventListener('click', holes, 
 
-// button.addEventListener('click', event => {
-//   button.innerHTML = `Click count: ${event.detail}`;
-
-//});
 
 
 
