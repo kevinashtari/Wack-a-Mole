@@ -103,6 +103,12 @@ addEventListener('click', (event) => {
   ////////////////////////////////////////////////////////////////////////////////
  if(event.target.matches('.holes' + '.moles')){
   console.log('Mole Hit')
+  game.score = game.score + 1
+  event.target.classList.remove('moles');
+  document.getElementById('game-score').innerText = game.score
+  if(game.score > 19){
+    alert('You Win!!')
+  }
   //select the image that was clicked 
 //if hit remove all moles event.target remove the class of moles
   //remove that image
@@ -118,11 +124,11 @@ addEventListener('click', (event) => {
   console.log('You Miss')
  }
 
-function getScore(click, moles){
-  moles.score();
-  score += 10;
-  scoreText.setText('Points:' + score);
-}
+// function getScore(click, moles){
+//   moles.score();
+//   score += 10;
+//   scoreText.setText('Points:' + score);
+// }
 
 
   //if a mole was clicked -- see if div has class of "moles" -- see if element.target is class of moles
