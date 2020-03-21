@@ -114,10 +114,15 @@ addEventListener('click', (event) => {
 
   //change its inner text to match the new games score 
 
- }else {
+}else {
   console.log('You Miss')
  }
 
+function getScore(click, moles){
+  moles.score();
+  score += 10;
+  scoreText.setText('Points:' + score);
+}
 
 
   //if a mole was clicked -- see if div has class of "moles" -- see if element.target is class of moles
